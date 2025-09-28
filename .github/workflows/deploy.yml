@@ -1,28 +1,31 @@
-name: Deploy to GitHub Pages
+name: Deploy Vite app to GitHub Pages
 
 on:
   push:
     branches:
-      - main
+      - main  # деплой только из main
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write   # 👈 даёт github-actions[bot] права пушить в gh-pages
 
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
-          node-version: 20
+          node-version: 18
 
-      - run: npm install
-      - run: npm run build
+      - name: Install dependencies
+        run: npm ci
 
-      - name: Deploy
+      - name: Build project
+        run: npm run build
+
+      - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          publish_branch: gh-pages   # 👈 всегда пушим в gh-pages
+          publish_dir: ./dist  # <-- всегда только dist
