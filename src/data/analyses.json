@@ -4,8 +4,8 @@
     "diagnosis": "Гастрит",
     "symptoms": "Боль в желудке, изжога",
     "photos": [
-      "/analyses/gastrit1.jpg",
-      "/analyses/gastrit2.jpg"
+      "/analyses/img_girl.jpg",
+      "/my-health/analyses/img_girl.jpg"
     ],
     "treatment": [
       "Диета — исключить острое и жареное",
