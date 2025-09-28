@@ -4,7 +4,7 @@
     "diagnosis": "Гастрит",
     "symptoms": "Боль в желудке, изжога",
     "photos": [
-      "/analyses/img_girl.jpg",
+      "/my-health/analyses/img_girl.jpg",
       "/my-health/analyses/img_girl.jpg"
     ],
     "treatment": [
@@ -20,7 +20,7 @@
     "diagnosis": "ОРВИ",
     "symptoms": "Температура 38.5, кашель",
     "photos": [
-      "/analyses/orvi1.jpg"
+      "/my-health/analyses/img_girl.jpg"
     ],
     "treatment": [
       "Постельный режим",

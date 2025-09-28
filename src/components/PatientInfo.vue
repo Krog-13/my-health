@@ -12,6 +12,7 @@
       <div><strong>Должность:</strong> {{ patient.position }}</div>
       <div><strong>Режим питания:</strong> {{ patient.diet }}</div>
       <div><strong>Основное питание:</strong> {{ patient.main_food }}</div>
+      <div><strong>Основное питание:</strong> {{ patient.marital_status }}</div>
     </div>
 
     <div v-if="patient.additional" class="mt-4">
