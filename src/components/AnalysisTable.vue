@@ -36,6 +36,7 @@
           </td>
           <td class="border p-2">
             <ul class="list-disc pl-5">
+              <hr>
               <li v-for="(treat, tIndex) in item.treatment" :key="tIndex">
                 {{ treat }}
               </li>
